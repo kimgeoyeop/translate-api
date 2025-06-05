@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  translate-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - HF_HOME=/cache
+    volumes:
+      - /c/workspace/cache:/cache  # Windows 기준 경로
